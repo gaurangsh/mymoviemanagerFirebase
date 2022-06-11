@@ -1,0 +1,280 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    background-color: rgb(241, 242, 226);
+}
+h2{
+    padding: 0;
+    margin: 0;
+}
+h3{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+input{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+button{
+    font-family: monospace;
+}
+
+#header{
+    position: fixed;
+    z-index: 1;
+    top:0;
+    background-color: white;
+    width: 100%;
+    height:70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerMainCont{
+    height:100%;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchDiv{
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#searchBar{
+    height: 100%;
+    width: 90%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#searchBtn{
+    height: 100%;
+    width: 10%;
+    font-size: 1.2vw;
+    border-left:0;
+    background-color: rgb(213, 213, 213);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#searchBtn:hover{
+    background-color: rgba(213, 213, 213, 0.588);
+}
+#logoutBtn{
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    font-size: 1vw;
+    height: 80%;
+    background-color: rgb(207, 153, 112);
+}
+
+#logoutBtn:hover{
+    background-color: rgba(207, 153, 112, 0.484);
+}
+
+#mainBox{
+    margin-top: 70px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addLibraryDiv{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#addLibBtn{
+    border-radius: 50%;
+    height:50px;
+    width:50px;
+    border:0;
+    background-color: rgb(255, 199, 116);
+    transition: 0.3s;
+}
+
+#addLibBtn:hover{
+    background-color: rgb(251, 176, 64);
+}
+
+#initialCreateDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 37%;
+    height: 100%;
+}
+
+#libDetailsDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+}
+
+#libTitleInp{
+    width: 30%;
+    height: 25%;
+    border-radius: 5px;
+}
+
+#libDescInp{
+    width: 30%;
+    height: 80%;
+    border-radius: 5px;
+}
+
+#libDetailsBtnDiv{
+    height: 65%;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.libDetailsBtn{
+    border-radius: 0.5vw;
+    width: 70%;
+    font-size: 1.5vw;
+    height: 35%;
+    background-color: rgb(207, 153, 112);
+}
+
+.libDetailsBtn:hover{
+    background-color: rgba(207, 153, 112, 0.484);
+}
+
+.libraryContainer{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.library{
+    width: 29%;
+    height: 99%;
+    display: flex;
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px rgb(153, 134, 91);
+}
+
+.library p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.1vw;
+    word-wrap: break-word;
+}
+
+.library h2{
+    margin: 0;
+    padding: 0;
+    font-size: 1.8vw;
+}
+.library:hover{
+    width: 30%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.libHeading{
+    width: 90%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellowLine{
+    width: 80%;
+    background-color: rgb(246, 190, 60);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 3px;
+}
+
+.libDesc{
+    width: 80%;
+    height:55%;
+}
+
+.libraryBtnDiv{
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.libraryAddBtnDiv{
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.libBtns{
+    border-radius: 0.5vw;
+    width: 40%;
+    font-size: 1.2vw;
+    height: 100%;
+    background-color: rgb(207, 153, 112);
+}
+
+.libBtns:hover{
+    background-color: rgba(207, 153, 112, 0.484);
+}

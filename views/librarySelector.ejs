@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Select Library</title>
+        <link rel = "stylesheet" href = "../home.css">
+    </head>
+    <body>
+        <p id="movId" style="display:none;"><%- movId %></p>
+        <div id="header">
+            
+            <div id="headerMainCont">
+                <h2 style="width:20%;">My Movie Manager</h2>
+                <form id="searchDiv" method="post" action="/search">
+                    <input id = "searchBar" name = "movieName" type = "text" required placeholder="Type movie to search" />
+                    <input id = "searchBtn" type ="submit" value="&#128269;"/>
+                </form>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </div>
+        <div id="mainBox">
+           
+            <hr style="width: 100%;">
+            <h2 style="color:grey; margin: 18px;">Select a Library:</h2>
+            <% for(var i=0;i<libs.length;i++){ %>
+                <div class = "libraryContainer">
+                    <% var j=0 %>
+                    <% while(j<3&&i<libs.length){ %>
+                        <div class="library" id="<%- libs[i].libraryId %>">
+                            <div class="libHeading">
+                                <h2><%- libs[i].Title %></h2>
+                            </div>
+                            <div class="yellowLine"></div>
+                            <div class="libDesc">
+                                <p><%- libs[i].Description %></p>
+                                    
+                                <p style="margin-top: 2%; font-size:1vw; color:grey;">Created On: <%- libs[i].dateOfCreation %></p>
+                            </div>
+                            <div class="libraryAddBtnDiv">
+                                <button id="addToLibBtn" class="libBtns">Add</button>
+                            </div>
+                        </div>
+                        <% j = j+1 %>
+                        <% i = i+1 %>
+                    <% } %>
+                </div>
+                <% i = i-1 %>
+            <% } %>
+        </div>
+    </body>
+    <script src="../librarySelector.js"></script>
+</html>

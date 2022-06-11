@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>User Login</title>
+        <link rel = "stylesheet" href = "auth.css">
+    </head>
+    <body>
+        <p id="message" style="display: none;"> <%- message %> </p>
+        <div id = "mainDiv">
+            <div id = "companyName">
+                <h2>My Movie Manager</h2>
+            </div>
+            <form id="biggerContainer" method="post" action="/signin">
+                <h3 id="authHeading">Welcome Back Viewer</h3>
+                <div class = "authInputsDiv" id = "usernameInpDiv">
+                    <p>Username:</p>
+                    <input type="text" required name="username" id = "usernameInp" />
+                </div>
+                <div class = "authInputsDiv" id = "paswwordInpDiv">
+                    <p>Password:</p>
+                    <input type="password" required name="password" id = "passwordInp" />
+                </div>
+                <input type="submit" id="submitBtn" value="Login"/>
+            </form>
+            <p>Not yet registered:</p>
+            <button class = "normalBtn" id="regBtn">Sign Up</button>
+        </div>
+    </body>
+    <script src = "signin.js"></script>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Sign-Up</title>
+        <link rel = "stylesheet" href = "auth.css">
+    </head>
+    <body>
+        <p id="message" style="display: none;"> <%= message %> </p>
+        <form id = "container" method="post" action="/signup">
+            <div id = "mainDiv">
+                <div id = "companyName">
+                    <h2>My Movie Manager</h2>
+                </div>
+                <div id="biggerContainer">
+                    <h3 id="authHeading">Become a member</h3>
+                    <div class = "authInputsDiv" id = "usernameInpDiv">
+                        <p>Username:</p>
+                        <input required name="username" id = "usernameInp" />
+                    </div>
+                    <div class = "authInputsDiv" id = "paswwordInpDiv">
+                        <p>Password:</p>
+                        <input required type="password" name="password" id = "passwordInp" />
+                    </div>
+                    <div class = "authInputsDiv"  id = "nameInpDiv">
+                        <p>Name:</p>
+                        <input required name="name" id = "nameInp" />
+                    </div>
+                    <input type="submit" name="submitBtn" id="submitBtn" value="Register"/>
+                </div>
+                <p>Already a member:</p>
+                <button class = "normalBtn" id="loginBtn">Sign In</button>
+            </div>
+        </form>
+    </body>
+    <script src = "signup.js"></script>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Search</title>
+        <link rel = "stylesheet" href = "../movieslist.css">
+    </head>
+    <body>
+        
+        <div id="header">
+            
+            <div id="headerMainCont">
+                <h2 style="width:20%;">My Movie Manager</h2>
+                <form id="searchDiv" method="post" action="/search">
+                    <input id = "searchBar" name = "movieName" type = "text" required placeholder="Type movie to search" />
+                    <input id = "searchBtn" type ="submit" value="&#128269;"/>
+                </form>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </div>
+        <div id="mainBox">
+            <h2 style="color:grey; margin: 5px; margin-top: 10px;">Search Results:</h2>
+            <hr style="width: 100%;">
+            <% if(showRes == false) {%>
+                <h1 style="color:grey; margin-top:15px; text-align:center;">No Results!<br>Please be more specific</h1>
+            
+            <% }else {%>
+                <% for(var i=0;i<movies.length;i++) {%>
+                    <div class = "bigger" id="<%- movies[i].newBody.imdbID %>">
+                        <div class = "movieImage" style='background-image:url(<%= movies[i].newBody.image %>);'>
+
+                        </div>
+                        <div class = "smaller">
+                            <div class="aboutMovie">
+                                <h2><%= movies[i].newBody.Title %></h2>
+                                <p><%= movies[i].newBody.Plot %></p>
+                            </div>
+                            <div class="aboutMovieR">
+                                <h4>Year of Release: <%= movies[i].newBody.Year %></h4>
+                                <h4>iMDB Rating: <%= movies[i].newBody.imdbRating %></h4>
+                                <h4>Language: <%= movies[i].newBody.Language %></h4>
+                            </div>
+                            <button class="addToLib">+</button>
+                        </div>
+                    </div>
+                <%}%>
+            <%}%>
+        </div>
+    </body>
+    <script src="../movieslist.js"></script>
+</html>

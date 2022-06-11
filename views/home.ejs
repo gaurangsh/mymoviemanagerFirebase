@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel = "stylesheet" href = "home.css">
+    </head>
+    <body>
+        <p id="message" style="display:none;"><%- message %></p>
+        <div id="header">
+            
+            <div id="headerMainCont">
+                <h2 style="width:20%;">My Movie Manager</h2>
+                <form id="searchDiv" method="post" action="/search">
+                    <input id = "searchBar" name = "movieName" type = "text" required placeholder="Type movie to search" />
+                    <input id = "searchBtn" type ="submit" value="&#128269;"/>
+                </form>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </div>
+        <div id="mainBox">
+           
+            <h2 style="color:grey; margin: 5px; margin-top: 10px;">Hello <%=user.name%></h2>
+            <hr style="width: 100%;">
+            <div id = "addLibraryDiv">
+                <div id = "initialCreateDiv">
+                    <h3>Create a library:</h3>
+                    <button id="addLibBtn">+</button>
+                </div>
+                <div id = "libDetailsDiv" style="display:none">
+                    <input id="libTitleInp" maxlength="20" placeholder="Enter the name of your library" />
+                    <textarea id="libDescInp" maxlength="150" placeholder="Give a brief description&#10;about your library&#x0a;(max limit=150 char)"></textarea>
+                    <div id="libDetailsBtnDiv">
+                        <button id="libInfoSubmitBtn" class="libDetailsBtn">Submit</button>
+                        <button id="cancelBtn" class="libDetailsBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="width: 100%;">
+            <h2 style="color:grey; margin: 10px;">Your Libraries:</h2>
+            <% for(var i=0;i<libs.length;i++){ %>
+                <div class = "libraryContainer">
+                    <% var j=0 %>
+                    <% while(j<3&&i<libs.length){ %>
+                        <div class="library" id="<%- libs[i].libraryId %>">
+                            <div class="libHeading">
+                                <h2><%- libs[i].Title %></h2>
+                            </div>
+                            <div class="yellowLine"></div>
+                            <div class="libDesc">
+                                <p><%- libs[i].Description %></p>
+                                    
+                                <p style="margin-top: 2%; font-size:1vw; color:grey;">Created On: <%- libs[i].dateOfCreation %></p>
+                            </div>
+                            <div class="libraryBtnDiv">
+                                <button id="libEditBtn" class="libBtns">Open</button>
+                                <button id="libDeleteBtn" class="libBtns">Delete</button>
+                            </div>
+                        </div>
+                        <% j = j+1 %>
+                        <% i = i+1 %>
+                    <% } %>
+                </div>
+                <% i = i-1 %>
+            <% } %>
+        </div>
+    </body>
+    <script src="home.js"></script>
+</html>
