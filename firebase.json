@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "mymoviemanager",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
